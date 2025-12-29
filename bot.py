@@ -10,8 +10,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 from flask import Flask
-import os
-from threading import Thread
+import threading
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
