@@ -9,6 +9,10 @@ from discord import app_commands
 from discord.ext import commands
 from dotenv import load_dotenv
 
+from flask import Flask
+import os
+from threading import Thread
+
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 ADMIN_USER_IDS = [330055279699820554]  # Replace with your Discord ID
@@ -254,4 +258,22 @@ async def edit_event(interaction: discord.Interaction, event_id: int, json_data:
         await interaction.response.send_message("❌ Błędny JSON!", ephemeral=True)
 
 if __name__ == "__main__":
+    bot.run(TOKEN)
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Pokémon Bot online! /granie"
+
+def run_flask():
+    port = int(os.environ.get('PORT', 10000))
+    app.run(host='0.0.0.0', port=port)
+
+if __name__ == "__main__":
+    # Start Flask in background
+    flask_thread = Thread(target=run_flask, daemon=True)
+    flask_thread.start()
+    
+    # Start Discord bot
     bot.run(TOKEN)
