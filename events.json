@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "date": "2026-01-03",
+    "time": "12:00",
+    "place": "Basestack",
+    "type": [
+      "Luźne"
+    ],
+    "extra": "[Ascended legal]"
+  },
+  {
+    "id": 2,
+    "date": "2026-01-04",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Puchar"
+    ]
+  },
+  {
+    "id": 3,
+    "date": "2026-01-10",
+    "time": "12:00",
+    "place": "Basestack",
+    "type": [
+      "Luźne"
+    ],
+    "extra": "[Ascended legal]"
+  },
+  {
+    "id": 4,
+    "date": "2026-01-11",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Luźne"
+    ],
+    "extra": "[Ascended legal]"
+  },
+  {
+    "id": 5,
+    "date": "2026-01-17",
+    "time": "12:00",
+    "place": "Basestack",
+    "type": [
+      "Challenge"
+    ]
+  },
+  {
+    "id": 6,
+    "date": "2026-01-18",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Challenge",
+      "Puchar"
+    ]
+  },
+  {
+    "id": 7,
+    "date": "2026-01-24",
+    "time": "12:00",
+    "place": "Basestack",
+    "type": [
+      "Luźne"
+    ],
+    "extra": "[Ascended legal]"
+  },
+  {
+    "id": 8,
+    "date": "2026-01-25",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Luźne"
+    ],
+    "extra": "[Ascended legal]"
+  },
+  {
+    "id": 9,
+    "date": "2026-01-31",
+    "time": "12:00",
+    "place": "Basestack",
+    "type": [
+      "Luźne"
+    ],
+    "extra": "[Ascended legal]"
+  },
+  {
+    "id": 10,
+    "date": "2026-02-01",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Challenge",
+      "Puchar"
+    ]
+  },
+  {
+    "id": 11,
+    "date": "2026-02-07",
+    "time": "12:00",
+    "place": "Basestack",
+    "type": [
+      "Challenge"
+    ]
+  },
+  {
+    "id": 12,
+    "date": "2026-02-08",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Luźne"
+    ]
+  },
+  {
+    "id": 13,
+    "date": "2026-02-14",
+    "time": "12:00",
+    "place": "Basestack",
+    "type": [
+      "Luźne"
+    ]
+  },
+  {
+    "id": 14,
+    "date": "2026-02-21",
+    "time": "12:00",
+    "place": "Basestack",
+    "type": [
+      "Cup"
+    ]
+  },
+  {
+    "id": 15,
+    "date": "2026-02-22",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Cup"
+    ]
+  },
+  {
+    "id": 16,
+    "date": "2026-02-28",
+    "time": "12:00",
+    "place": "Basestack",
+    "type": [
+      "Luźne"
+    ]
+  },
+  {
+    "id": 17,
+    "date": "2026-03-01",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Challenge",
+      "Puchar"
+    ]
+  },
+  {
+    "id": 18,
+    "date": "2026-03-08",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Luźne"
+    ]
+  },
+  {
+    "id": 19,
+    "date": "2026-03-13",
+    "time": "12:00",
+    "place": "Basestack",
+    "type": [
+      "Prerelease"
+    ],
+    "extra": "[Perfect Order]"
+  },
+  {
+    "id": 20,
+    "date": "2026-03-15",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Prerelease"
+    ],
+    "extra": "[Perfect Order]"
+  },
+  {
+    "id": 21,
+    "date": "2026-03-22",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Prerelease"
+    ],
+    "extra": "[Perfect Order]"
+  },
+  {
+    "id": 22,
+    "date": "2026-03-29",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Puchar"
+    ]
+  },
+  {
+    "id": 23,
+    "date": "2026-04-12",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Challenge",
+      "Puchar"
+    ]
+  },
+  {
+    "id": 24,
+    "date": "2026-04-19",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Luźne"
+    ]
+  },
+  {
+    "id": 25,
+    "date": "2026-04-26",
+    "time": "12:00",
+    "place": "Gralnia",
+    "type": [
+      "Luźne"
+    ]
+  }
+]
