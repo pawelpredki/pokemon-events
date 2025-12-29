@@ -141,7 +141,7 @@ async def granie(interaction: discord.Interaction, od: str = None, do: str = Non
     # Send first embed, then followups (Discord limit: 10 embeds/message)
     await interaction.response.send_message(embed=embeds[0])
     for embed in embeds[1:]:
-        await interaction.followup.send(embed=embed, ephemeral=True)
+        await interaction.followup.send(embed=embed, ephemeral=False)
     
     # for event in events:
     #     # Get emoji for primary type (first type)
@@ -257,23 +257,19 @@ async def edit_event(interaction: discord.Interaction, event_id: int, json_data:
     except json.JSONDecodeError:
         await interaction.response.send_message("❌ Błędny JSON!", ephemeral=True)
 
-if __name__ == "__main__":
-    bot.run(TOKEN)
-
-app = Flask('')
+app = Flask(__name__)
 
 @app.route('/')
+@app.route('/health')
 def home():
-    return "Pokémon Bot online! /granie"
-
-def run_flask():
-    port = int(os.environ.get('PORT', 10000))
-    app.run(host='0.0.0.0', port=port)
+    return {"status": "Pokémon Bot online!", "commands": "/granie"}
 
 if __name__ == "__main__":
-    # Start Flask in background
-    flask_thread = Thread(target=run_flask, daemon=True)
+    # Start Flask FIRST (Render detects port)
+    port = int(os.environ.get("PORT", 10000))
+    flask_thread = threading.Thread(target=lambda: app.run(host="0.0.0.0", port=port, debug=False), daemon=True)
     flask_thread.start()
+    print(f"🌐 Flask on port {port}")
     
-    # Start Discord bot
+    # THEN start Discord bot
     bot.run(TOKEN)
