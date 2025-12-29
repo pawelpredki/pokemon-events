@@ -15,7 +15,7 @@ from threading import Thread
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
-ADMIN_USER_IDS = [330055279699820554]  # Replace with your Discord ID
+ADMIN_USER_IDS = [330055279699820554, 695382652751970379, 342009984709558272, 151361827085877248]  # Replace with your Discord ID
 
 # Timezone (CET/CEST for Poland)
 TIMEZONE = ZoneInfo("Europe/Warsaw")
@@ -76,7 +76,7 @@ def parse_date(date_str: str = None) -> dt.datetime:
         return dt_obj.replace(hour=12, minute=0, second=0)  # All at 12:00
     return dt.datetime.now().replace(hour=12, minute=0, second=0, microsecond=0)
 
-def get_events_in_range(start_date: dt.datetime, days: int = 5) -> List[Dict[str, Any]]:
+def get_events_in_range(start_date: dt.datetime, days: int = 7) -> List[Dict[str, Any]]:
     """Get events from start_date for 'days' days, sorted by date/time"""
     end_date = start_date + dt.timedelta(days=days)
     filtered = []
@@ -100,14 +100,11 @@ def format_public_event(event: Dict[str, Any]) -> str:
     return f"**{types}** • {date} {time} {extra}".strip()
 
 @bot.tree.command(name="granie", description="Nadchodzące turnieje Pokémon")
-@app_commands.describe(od="Data startowa YYYY-MM-DD (domyślnie dziś)", do="Data końcowa YYYY-MM-DD (domyślnie +7 dni)")
-async def granie(interaction: discord.Interaction, od: str = None, do: str = None):
+@app_commands.describe(od="Data startowa YYYY-MM-DD (domyślnie dziś)")
+async def granie(interaction: discord.Interaction, od: str = None):
     # Parse dates
     start_date = parse_date(od)
-    if do:
-        end_date = parse_date(do)
-    else:
-        end_date = start_date + dt.timedelta(days=7)
+    end_date = start_date + dt.timedelta(days=7)
     
     events = get_events_in_range(start_date, (end_date - start_date).days + 1)
     
