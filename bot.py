@@ -78,10 +78,13 @@ def parse_date(date_str: str = None) -> dt.datetime:
 def get_events_in_range(start_date: dt.datetime, days: int = 7) -> List[Dict[str, Any]]:
     """Get events from start_date for 'days' days, sorted by date/time"""
     end_date = start_date + dt.timedelta(days=days)
+    now = dt.datetime.now()  # or your timezone-aware now()
     filtered = []
     
     for event in EVENTS:
         event_dt = dt.datetime.strptime(f"{event['date']} {event['time']}", "%Y-%m-%d %H:%M")
+        if event_dt < now:
+            continue
         if start_date.date() <= event_dt.date() < end_date.date():
             filtered.append(event)
     
@@ -99,8 +102,8 @@ def format_public_event(event: Dict[str, Any]) -> str:
     return f"**{types}** • {date} {time} {extra}".strip()
 
 @bot.tree.command(name="granie", description="Nadchodzące turnieje Pokémon")
-@app_commands.describe(od="Data startowa YYYY-MM-DD (domyślnie dziś)")
-async def granie(interaction: discord.Interaction, od: str = None):
+@app_commands.describe(od="Data startowa YYYY-MM-DD (domyślnie dziś)", tylkoja="Jeśli True, to odpowiada tylko Tobie a nie na kanał")
+async def granie(interaction: discord.Interaction, od: str = None, tylkoja: bool = False):
     # Parse dates
     start_date = parse_date(od)
     end_date = start_date + dt.timedelta(days=7)
@@ -135,9 +138,9 @@ async def granie(interaction: discord.Interaction, od: str = None):
         embeds.append(embed)
     
     # Send first embed, then followups (Discord limit: 10 embeds/message)
-    await interaction.response.send_message(embed=embeds[0])
+    await interaction.response.send_message(embed=embeds[0], ephemeral=tylkoja)
     for embed in embeds[1:]:
-        await interaction.followup.send(embed=embed, ephemeral=False)
+        await interaction.followup.send(embed=embed, ephemeral=tylkoja)
     
     # for event in events:
     #     # Get emoji for primary type (first type)
