@@ -118,7 +118,7 @@
         "date": "2026-02-22",
         "time": "12:00",
         "place": "Gralnia",
-        "type": ["Cup"]
+        "type": ["Puchar"]
     },
     {
         "id": 17,
@@ -139,12 +139,12 @@
         "date": "2026-03-08",
         "time": "12:00",
         "place": "Gralnia",
-        "type": ["Luźne"]
+        "type": ["Cup"]
     },
     {
         "id": 19,
         "date": "2026-03-13",
-        "time": "12:00",
+        "time": "20:00",
         "place": "Basestack",
         "type": ["Prerelease"],
         "extra": "[Perfect Order]"
@@ -185,6 +185,14 @@
         "time": "12:00",
         "place": "Gralnia",
         "type": ["Luźne"]
+    },
+    {
+        "id": 28,
+        "date": "2026-04-25",
+        "time": "12:00",
+        "place": "Basestack",
+        "type": ["Luźne"],
+        "extra": "Praga Regio"
     },
     {
         "id": 25,
