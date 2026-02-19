@@ -116,7 +116,7 @@
     {
         "id": 15,
         "date": "2026-02-22",
-        "time": "12:00",
+        "time": "12:30",
         "place": "Gralnia",
         "type": ["Puchar"]
     },
@@ -201,5 +201,12 @@
         "place": "Gralnia",
         "type": ["Luźne"],
         "extra": "Praga Regio"
+    },
+    {
+        "id": 29,
+        "date": "2026-02-28",
+        "time": "12:00",
+        "place": "Biblioteka Gdańska",
+        "type": ["Luźne"]
     }
 ]
