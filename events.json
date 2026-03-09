@@ -143,16 +143,32 @@
     },
     {
         "id": 19,
-        "date": "2026-03-13",
-        "time": "20:00",
+        "date": "2026-03-14,
+        "time": "12:00",
         "place": "Basestack",
         "type": ["Prerelease"],
         "extra": "[Perfect Order]"
     },
     {
-        "id": 20,
+        "id": 30,
         "date": "2026-03-15",
-        "time": "12:00",
+        "time": "11:00",
+        "place": "Gralnia",
+        "type": ["Prerelease"],
+        "extra": "[Perfect Order]"
+    },
+    {
+        "id": 31,
+        "date": "2026-03-15",
+        "time": "15:00",
+        "place": "Gralnia",
+        "type": ["Prerelease"],
+        "extra": "[Perfect Order]"
+    },
+    {
+        "id": 20,
+        "date": "2026-03-22",
+        "time": "11:00",
         "place": "Gralnia",
         "type": ["Prerelease"],
         "extra": "[Perfect Order]"
@@ -160,7 +176,7 @@
     {
         "id": 21,
         "date": "2026-03-22",
-        "time": "12:00",
+        "time": "15:00",
         "place": "Gralnia",
         "type": ["Prerelease"],
         "extra": "[Perfect Order]"
